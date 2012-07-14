@@ -22,6 +22,13 @@ input.edit {
 	outline: none;
 }
 
+.new-todo {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	padding: 4px;
+	width: 98%;
+}
+
 .todo {
 	cursor: pointer;
 }

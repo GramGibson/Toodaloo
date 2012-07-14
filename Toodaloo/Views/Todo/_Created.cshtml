@@ -4,4 +4,4 @@
 $('#empty-todo').remove();
 $('#todos').append($('@Html.Partial("_Todo", Model).EscapeJavascript()').hide());
 $('#todo_@Model.Id').fadeIn();
-$('#new-todo-content').val('').focus();
+$('.new-todo').val('').focus();
