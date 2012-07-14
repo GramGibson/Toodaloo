@@ -1,0 +1,8 @@
+bin
+obj
+App_Data
+*.user
+*.suo
+*.trx
+*.pdb
+Thumbs.db
