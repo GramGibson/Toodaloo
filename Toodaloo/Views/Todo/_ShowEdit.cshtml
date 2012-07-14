@@ -1,0 +1,5 @@
+﻿﻿@model Toodaloo.Models.Todo
+@using Toodaloo.Helpers
+
+$('#todo_@Model.Id').replaceWith('@Html.Partial("_EditForm", Model).EscapeJavascript()');
+$('#edit_todo_@Model.Id input[name=Description]').focus();

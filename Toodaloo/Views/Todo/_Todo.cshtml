@@ -1,0 +1,5 @@
+﻿﻿@model Toodaloo.Models.Todo
+
+<li class="todo" id="todo_@Model.Id">
+    @Model.Description <a href="/todo/delete/@Model.Id" class="delete">[delete]</a>
+</li>

@@ -39,9 +39,12 @@ namespace Toodaloo.Controllers {
 		[RequireAjax]
 		public ActionResult Edit(int id, Todo todo) {
 			var updated = _ctx.Todos.Where(w => w.Id == id).FirstOrDefault();
-			UpdateModel(updated);
-			updated.LastModified = DateTime.Now;
-			_ctx.SaveChanges();
+
+			if (todo.Description != null) {
+				UpdateModel(updated);
+				updated.LastModified = DateTime.Now;
+				_ctx.SaveChanges();
+			}
 
 			return PartialView("_Edited", updated);
 		}
@@ -51,6 +54,7 @@ namespace Toodaloo.Controllers {
 		public ActionResult Delete(int id) {
 			var todo = _ctx.Todos.Where(w => w.Id == id).FirstOrDefault();
 			_ctx.Todos.Remove(todo);
+			_ctx.SaveChanges();
 
 			return PartialView("_Deleted", id);
 		}

@@ -140,6 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Css\default.css" />
+    <Content Include="Content\Js\app.js" />
     <Content Include="Global.asax" />
     <None Include="Content\Js\jquery.validate-vsdoc.js" />
     <Content Include="Content\Js\jquery.unobtrusive-ajax.js" />
@@ -166,6 +167,13 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Todo\Index.cshtml" />
+    <Content Include="Views\Todo\_EmptyTodo.cshtml" />
+    <Content Include="Views\Todo\_Created.cshtml" />
+    <Content Include="Views\Todo\_ShowEdit.cshtml" />
+    <Content Include="Views\Todo\_Edited.cshtml" />
+    <Content Include="Views\Todo\_Deleted.cshtml" />
+    <Content Include="Views\Todo\_EditForm.cshtml" />
+    <Content Include="Views\Todo\_Todo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

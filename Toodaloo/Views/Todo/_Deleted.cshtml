@@ -1,0 +1,8 @@
+﻿@model int
+
+$('#todo_@Model').slideUp(200, function() {
+	$(this).remove();
+	if ($('#todos').children().length == 0) {
+		$('#todos').append('@Html.Partial("_EmptyTodo")');
+	}
+})

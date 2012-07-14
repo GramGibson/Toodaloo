@@ -1,1 +1,35 @@
-﻿
+﻿body {
+	background: #eee;	
+	font-family: 'Open Sans', sans-serif;		
+}
+
+h2, form, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+	margin-bottom: 6px;
+}
+
+.todo {
+	cursor: pointer;
+}
+
+#todos {
+	padding: 18px 0;
+}
+
+#empty-todo {
+	color: #999;
+	font-style: italic;
+}
+
+#container {
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 24px;
+	width: 480px;
+	margin: 60px auto;
+}

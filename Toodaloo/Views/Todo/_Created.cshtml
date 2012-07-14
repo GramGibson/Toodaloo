@@ -1,0 +1,7 @@
+﻿﻿@model Toodaloo.Models.Todo
+@using Toodaloo.Helpers
+
+$('#empty-todo').remove();
+$('#todos').append($('@Html.Partial("_Todo", Model).EscapeJavascript()').hide());
+$('#todo_@Model.Id').fadeIn();
+$('#new-todo-content').val('').focus();
