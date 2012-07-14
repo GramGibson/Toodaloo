@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Toodaloo.Models {
 	/// <summary>
@@ -8,11 +9,14 @@ namespace Toodaloo.Models {
 		/// <summary>
 		/// Auto-incremented Id of the Todo
 		/// </summary>
+		[Key]
 		public int Id { get; set; }
 
 		/// <summary>
 		/// Description of the Todo
 		/// </summary>
+		[Required]
+		[MaxLength(250)]
 		public string Description { get; set; }
 
 		/// <summary>
