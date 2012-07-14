@@ -56,6 +56,10 @@ input.edit-todo-description {
 	color: #999;
 }
 
+.todo:hover {
+	color: #000;
+}
+
 #todos {
 	padding: 18px 0;
 }
