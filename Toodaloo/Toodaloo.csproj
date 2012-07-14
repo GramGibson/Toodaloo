@@ -137,7 +137,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Db.sdf" />
     <Content Include="Content\Css\default.css" />
     <Content Include="Global.asax" />
     <None Include="Content\Js\jquery.validate-vsdoc.js" />
@@ -166,7 +165,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Todo\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
