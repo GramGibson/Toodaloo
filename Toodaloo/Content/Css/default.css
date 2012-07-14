@@ -1,4 +1,4 @@
-﻿body {
+﻿ body {
 	background: #eee;	
 	font-family: 'Open Sans', sans-serif;		
 }
@@ -11,6 +11,15 @@ h2, form, ul, li {
 li {
 	list-style-type: none;
 	margin-bottom: 6px;
+}
+
+input.edit {
+	border: 0;
+	font-size: 1em;
+	margin-left: -1px;
+	margin-top: -1px;
+	font-family: 'Open Sans', sans-serif;
+	outline: none;
 }
 
 .todo {

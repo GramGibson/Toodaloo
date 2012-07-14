@@ -1,4 +1,4 @@
-﻿﻿@model Toodaloo.Models.Todo
+﻿@model Toodaloo.Models.Todo
 @using Toodaloo.Helpers
 
 $('#todo_@Model.Id').replaceWith('@Html.Partial("_EditForm", Model).EscapeJavascript()');

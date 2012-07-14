@@ -1,21 +1,21 @@
-﻿﻿@model IEnumerable<Toodaloo.Models.Todo>
+﻿@model IEnumerable<Toodaloo.Models.Todo>
 
 @{
-	ViewBag.Title = "Todo list";
+	ViewBag.Title = "To-do list";
 }
 
 <h2>To-do list</h2>
 
 <ul id="todos">
-@foreach (var todo in Model) {
-	@Html.Partial("_Todo", todo)
-}
-@if (Model.Count() == 0) {
-	@Html.Partial("_EmptyTodo")
-}
+	@foreach (var todo in Model) {
+		@Html.Partial("_Todo", todo)
+	}
+	@if (Model.Count() == 0) {
+		@Html.Partial("_EmptyTodo")
+	}
 </ul>
 
-<form id="new-todo" action="/todo/create" method="post">
-	<input id="new-todo-content" type="text" name="Description" />
+<form id="new-todo" action="@Url.Action("create")" method="post">
+	<input type="text" name="Description" />
 	<input type="submit" value="Add new To-do" />
 </form>
