@@ -1,8 +1,6 @@
 ﻿$(function() {
 
 	$('#new-todo').submit(function(e) {
-		e.preventDefault();
-
 		$.ajax({
 			type: $(this).attr('method'),
 			url: $(this).attr('action'),
@@ -11,11 +9,11 @@
 				eval(data);
 			}
 		});
+
+		return false;
 	});
 
 	$('#edit-todo').live('submit', function(e) {
-		e.preventDefault();
-
 		$.ajax({
 			type: $(this).attr('method'),
 			url: $(this).attr('action'),
@@ -24,12 +22,11 @@
 				eval(data);
 			}
 		});
+
+		return false;
 	});
 
 	$('.cancel-edit').live('click', function(e) {
-		e.stopPropagation();
-		e.preventDefault();
-
 		$.ajax({
 			type: 'POST',
 			url: $(this).attr('href'),
@@ -37,6 +34,8 @@
 				eval(data);
 			}
 		});
+
+		return false;
 	});
 
 	$('.todo').live('click', function(e) {
@@ -50,9 +49,6 @@
 	});
 
 	$('.delete').live('click', function(e) {
-		e.stopPropagation();
-		e.preventDefault();
-
 		$.ajax({
 			type: 'POST',
 			url: $(this).attr('href'),
@@ -60,6 +56,8 @@
 				eval(data);
 			}
 		});
+
+		return false;
 	});
 
 });
