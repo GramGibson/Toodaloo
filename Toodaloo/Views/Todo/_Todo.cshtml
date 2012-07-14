@@ -1,5 +1,9 @@
 ﻿@model Toodaloo.Models.Todo
 
 <li class="todo" id="todo_@Model.Id">
-    @Model.Description <a href="/todo/delete/@Model.Id" class="delete">[delete]</a>
+	<div class="controls">
+		<a href="@Url.Action("delete", new { id = Model.Id })" class="delete">X</a> | 
+		<a href="@Url.Action("edit", new { id = Model.Id })" class="edit">EDIT</a>
+	</div>
+    @Model.Description
 </li>

@@ -2,6 +2,6 @@
 
 <li id="edit_todo_@Model.Id">
 	<form id="edit-todo" action="/todo/edit/@Model.Id" method="post">
-		@Html.TextBoxFor(model => model.Description, new { @class = "edit" }) <a class="cancel-edit" href="/todo/edit/@Model.Id">[cancel]</a>
+		@Html.TextBoxFor(model => model.Description, new { @class = "edit-todo-description" }) @*<a class="cancel-edit" href="/todo/edit/@Model.Id">[cancel]</a>*@
 	</form>
 </li>
