@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Toodaloo.Models {
@@ -18,6 +19,12 @@ namespace Toodaloo.Models {
 		[Required]
 		[MaxLength(250)]
 		public string Description { get; set; }
+
+		/// <summary>
+		/// Completiong status of the Todo
+		/// </summary>
+		[DefaultValue(false)]
+		public bool Complete { get; set; }
 
 		/// <summary>
 		/// Timestamp that tracks when the Todo was last modified
