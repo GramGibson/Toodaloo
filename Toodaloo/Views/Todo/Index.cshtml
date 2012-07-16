@@ -20,7 +20,7 @@
 </form>
 
 <ul id="completed-todos">
-	@foreach (var todo in Model.Where(w => w.Complete && w.LastModified.Date >= DateTime.Today.AddDays(-5))) {
+	@foreach (var todo in Model.Where(w => w.Complete && w.LastModified.Date >= DateTime.Today.AddDays(-5)).OrderBy(o => o.LastModified)) {
 		@Html.Partial("_CompleteTodo", todo)
 	}
 </ul>
