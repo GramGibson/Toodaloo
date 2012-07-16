@@ -4,23 +4,27 @@
 	ViewBag.Title = "To-do list";
 }
 
-<h2>To-do list</h2>
+<div style="padding: 24px;">
+	<h2>To-do list</h2>
 
-<ul id="todos">
-	@foreach (var todo in Model.Where(w => !w.Complete)) {
-		@Html.Partial("_Todo", todo)
-	}
-	@if (Model.Where(w => !w.Complete).Count() == 0) {
-		@Html.Partial("_EmptyTodo")
-	}
-</ul>
+	<ul id="todos">
+		@foreach (var todo in Model.Where(w => !w.Complete)) {
+			@Html.Partial("_Todo", todo)
+		}
+		@if (Model.Where(w => !w.Complete).Count() == 0) {
+			@Html.Partial("_EmptyTodo")
+		}
+	</ul>
+</div>
 
 <form id="new-todo" action="@Url.Action("create")" method="post">
 	<input class="new-todo" type="text" name="Description" placeholder="add a new to-do..." />
 </form>
 
-<ul id="completed-todos">
-	@foreach (var todo in Model.Where(w => w.Complete && w.LastModified.Date >= DateTime.Today.AddDays(-5)).OrderBy(o => o.LastModified)) {
-		@Html.Partial("_CompleteTodo", todo)
-	}
-</ul>
+<div style="padding: 24px;">
+	<ul id="completed-todos">
+		@foreach (var todo in Model.Where(w => w.Complete && w.LastModified.Date >= DateTime.Today.AddDays(-5)).OrderBy(o => o.LastModified)) {
+			@Html.Partial("_CompleteTodo", todo)
+		}
+	</ul>
+</div>

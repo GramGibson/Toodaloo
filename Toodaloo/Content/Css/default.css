@@ -42,6 +42,11 @@ input.edit-todo-description {
 	text-decoration: none;
 }
 
+#new-todo {
+	background: #eee;
+	padding: 24px;
+}
+
 .new-todo {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1em;
@@ -61,13 +66,12 @@ input.edit-todo-description {
 }
 
 #completed-todos {
-	margin-top: 1.75em;
 	font-size: .85em;
 	color: #ccc;
 }
 
 #todos {
-	padding: 18px 0;
+	padding: 18px 0 0;
 }
 
 #empty-todo {
@@ -78,7 +82,7 @@ input.edit-todo-description {
 #container {
 	background: #fff;
 	border: 1px solid #ccc;
-	padding: 24px;
+	-padding: 24px;
 	width: 480px;
 	margin: 60px auto;
 	border-radius: 3px;
