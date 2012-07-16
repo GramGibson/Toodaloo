@@ -13,6 +13,19 @@
 		return false;
 	});
 
+	$('#container').on('click', '.todo-checkbox', function(e) {
+		$form = $(this).closest('form');
+
+		$.ajax({
+			type: $form.attr('method'),
+			url: $form.attr('action'),
+			data: $form.serialize(),
+			success: function(data, status, xhr) {
+				eval(data);
+			}
+		});
+	});
+
 	$('#container').on('mouseenter', '.todo', function(e) {
 		$(this).find('.controls').show();
 	});

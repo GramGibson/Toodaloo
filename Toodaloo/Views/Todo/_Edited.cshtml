@@ -1,4 +1,13 @@
 ﻿@model Toodaloo.Models.Todo
 @using Toodaloo.Helpers
 
-$('#edit_todo_@Model.Id').replaceWith('@Html.Partial("_Todo", Model).EscapeJavascript()');
+@if (Model.Complete) {
+	@:$('#todo_@Model.Id').remove();
+	@:$('#completed-todos').append('@Html.Partial("_CompleteTodo", Model).EscapeJavascript()');
+	@:if ($('#todos').children().length == 0) {
+	@:	$('#todos').html('@Html.Partial("_EmptyTodo").EscapeJavascript()');
+	@:}
+}
+else {
+	@:$('#edit_todo_@Model.Id').replaceWith('@Html.Partial("_Todo", Model).EscapeJavascript()');
+}

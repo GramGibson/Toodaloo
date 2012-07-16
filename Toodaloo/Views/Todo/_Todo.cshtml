@@ -1,9 +1,13 @@
 ﻿@model Toodaloo.Models.Todo
 
 <li class="todo" id="todo_@Model.Id">
-	<div class="controls">
-		<a href="@Url.Action("delete", new { id = Model.Id })" class="delete">X</a> | 
-		<a href="@Url.Action("edit", new { id = Model.Id })" class="edit">EDIT</a>
-	</div>
-    @Model.Description
+	<form action="@Url.Action("edit", new { id = Model.Id })" method="POST">
+		<div class="controls">
+			<a href="@Url.Action("delete", new { id = Model.Id })" class="delete">X</a> | 
+			<a href="@Url.Action("edit", new { id = Model.Id })" class="edit">EDIT</a>
+		</div>
+		@Html.CheckBoxFor(model => model.Complete, new { @class = "todo-checkbox", data_url = @Url.Action("edit", new { id = Model.Id }) })
+		@Model.Description
+		<input type="hidden" name="Description" value="@Model.Description" />
+	</form>
 </li>
