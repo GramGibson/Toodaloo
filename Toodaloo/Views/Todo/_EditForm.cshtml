@@ -2,6 +2,7 @@
 
 <li id="edit_todo_@Model.Id">
 	<form id="edit-todo" action="/todo/edit/@Model.Id" method="post">
-		@Html.TextBoxFor(model => model.Description, new { @class = "edit-todo-description" }) @*<a class="cancel-edit" href="/todo/edit/@Model.Id">[cancel]</a>*@
+		@Html.CheckBoxFor(model => model.Complete, new { @class = "todo-checkbox", data_url = @Url.Action("edit", new { id = Model.Id }) })
+		@Html.TextBoxFor(model => model.Description, new { @class = "edit-todo-description" })
 	</form>
 </li>
