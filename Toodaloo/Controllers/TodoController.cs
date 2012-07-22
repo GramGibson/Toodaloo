@@ -56,7 +56,7 @@ namespace Toodaloo.Controllers {
 			_ctx.Todos.Remove(todo);
 			_ctx.SaveChanges();
 
-			return PartialView("_Deleted", id);
+			return PartialView("_Deleted", todo);
 		}
 
 		protected override void Dispose(bool disposing) {

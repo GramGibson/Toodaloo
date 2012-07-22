@@ -65,6 +65,16 @@ input.edit-todo-description {
 	color: #000;
 }
 
+.delete-todo-button {
+	border: 1px solid #ccc; 
+	border-radius: 3px; 
+	font-size: .8em; 
+	font-weight: 600; 
+	color: #999; 
+	margin: 0 12px 0 0;
+	padding: 3px 6px;
+}
+
 #completed-todos {
 	font-size: .85em;
 	color: #ccc;

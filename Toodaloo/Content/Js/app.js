@@ -75,4 +75,16 @@
 		return false;
 	});
 
+	$('#container').on('click', '.delete-completed-todo', function(e) {
+		$.ajax({
+			type: 'POST',
+			url: $(this).data('url'),
+			success: function(data, status, xhr) {
+				eval(data);
+			}
+		});
+
+		return false;
+	});
+
 });

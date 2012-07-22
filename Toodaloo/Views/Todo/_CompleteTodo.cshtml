@@ -1,3 +1,3 @@
 ﻿@model Toodaloo.Models.Todo
 
-<li><strong>@Model.LastModified.ToString("MMM-dd")</strong> @Model.Description</li>
+<li id="completed_todo_@Model.Id"><button type="button" class="delete-completed-todo delete-todo-button" data-url="@Url.Action("delete", new { id = Model.Id })">X</button><strong>@Model.LastModified.ToString("MMM-dd")</strong> @Model.Description</li>
